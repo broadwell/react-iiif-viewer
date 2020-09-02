@@ -78,6 +78,9 @@ class MultiViewer extends React.Component {
     document.addEventListener("mozfullscreenchange", this.handleFullScreenChange);
     document.addEventListener("webkitfullscreenchange", this.handleFullScreenChange);
     document.addEventListener("msfullscreenchange", this.handleFullScreenChange);
+
+    console.log("Running backdoor");
+    this.props.backdoor(this.openSeadragonRef);
   }
 
   componentWillUnmount() {
@@ -220,7 +223,8 @@ MultiViewer.propTypes = {
   iiifUrls: PropTypes.array.isRequired,
   width: PropTypes.string,
   height: PropTypes.string,
-  showToolbar: PropTypes.bool
+  showToolbar: PropTypes.bool,
+  backdoor: PropTypes.func
 }
 
 MultiViewer.defaultProps = {
