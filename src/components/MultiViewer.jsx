@@ -79,7 +79,6 @@ class MultiViewer extends React.Component {
     document.addEventListener("webkitfullscreenchange", this.handleFullScreenChange);
     document.addEventListener("msfullscreenchange", this.handleFullScreenChange);
 
-    console.log("Running backdoor");
     this.props.backdoor(this.openSeadragonRef);
   }
 
